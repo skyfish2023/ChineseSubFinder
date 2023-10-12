@@ -34,7 +34,7 @@ func SkipFileInfo(l *logrus.Logger, curFile os.DirEntry, fileFullPath string) bo
 	}
 
 	// 软链接问题 #558 skyfish 1000->10
-	if fi.Size() < 0 {
+	if fi.Size() < 10 {
 
 		fileInfo, err := os.Lstat(fileFullPath)
 		if err != nil {
