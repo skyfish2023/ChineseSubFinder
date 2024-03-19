@@ -250,6 +250,7 @@ func IsWantedVideoExtDef(fileName string) bool {
 		_wantedExtMap[common.VideoExtIso] = common.VideoExtIso
 		_wantedExtMap[common.VideoExtM2ts] = common.VideoExtM2ts
 
+		_wantedExtMap[".strm"]=".strm"
 		for _, videoExt := range settings.Get().AdvancedSettings.CustomVideoExts {
 			_wantedExtMap[videoExt] = videoExt
 		}
